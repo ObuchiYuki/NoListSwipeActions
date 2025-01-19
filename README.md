@@ -1,5 +1,7 @@
 # NoListSwipeActions
 
+(japanese)[https://github.com/ObuchiYuki/NoListSwipeActions/blob/main/README-ja.md]
+
 **A custom SwiftUI library that replicates the iOS 15 “swipeActions” feature without using `List`.** 
 
 With this library, you can display swipe actions in `ScrollView` or any custom view, enabling swipe gestures for actions like delete or favorite.

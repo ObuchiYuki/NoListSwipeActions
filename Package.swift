@@ -5,17 +5,19 @@ import PackageDescription
 
 let package = Package(
     name: "NoListSwipeActions",
+    platforms: [
+        .iOS(.v17)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "NoListSwipeActions",
-            targets: ["NoListSwipeActions"]),
+            targets: ["NoListSwipeActions"]
+        ),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "NoListSwipeActions"),
+            name: "NoListSwipeActions"
+        ),
         .testTarget(
             name: "NoListSwipeActionsTests",
             dependencies: ["NoListSwipeActions"]

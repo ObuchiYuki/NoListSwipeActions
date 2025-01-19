@@ -13,7 +13,7 @@ struct SwipeToDeleteScreen: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                LazyVStack {
+                VStack {
                     ForEach(self.items, id: \.self) { item in
                         Text("Item \(item)")
                             .padding(.horizontal)

@@ -1,5 +1,5 @@
 //
-//  SwiftUIView.swift
+//  MultiActionsScreen.swift
 //  NoListSwipeActions
 //
 //  Created by yuki on 2025/01/19.
@@ -7,12 +7,53 @@
 
 import SwiftUI
 
-struct SwiftUIView: View {
+fileprivate struct Item: Identifiable {
+    var id: Int
+    var isFavorite: Bool
+}
+
+struct MultiActionsScreen: View {
+    @State private var items: [Item] = (0...100).map { Item(id: $0, isFavorite: false) }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    ForEach(self.items) { item in
+                        HStack {
+                            Text("Item \(item.id)")
+                            Spacer()
+                            Image(systemName: "star.fill")
+                                .foregroundColor(.yellow)
+                                .opacity(item.isFavorite ? 1 : 0)
+                        }
+                        .padding(.horizontal)
+                        .padding(.vertical, 12)
+                        ._swipeActions(actions: [
+                            SwipeAction(tint: .green, action: {
+                                guard let index = self.items.firstIndex(where: { $0.id == item.id }) else {
+                                    return
+                                }
+                                self.items[index].isFavorite.toggle()
+                            }, content: {
+                                Text("Favorite")
+                            }),
+                            SwipeAction(action: {
+                                
+                            }, content: {
+                                Text("Other")
+                            }),
+                            
+                        ])
+                    }
+                }
+                ._swipeActionsContainer()
+            }
+            .navigationTitle("Multi Actions")
+        }
     }
 }
 
 #Preview {
-    SwiftUIView()
+    MultiActionsScreen()
 }

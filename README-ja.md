@@ -2,7 +2,7 @@
 
 **SwiftUIの`List`を使わずに、iOS15以降で使える「swipeActions」とほぼ同等の機能を実現できるカスタム実装ライブラリ**です。`ScrollView`や任意のViewでスワイプアクションを表示し、スワイプして削除・お気に入りなどのアクションを呼び出すUIを実装できます。
 
-
+<img src="https://github.com/user-attachments/assets/abb8559b-e374-407c-a370-1193872ef5b5" width="300px">
 
 ## 特徴
 

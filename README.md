@@ -1,6 +1,6 @@
 # NoListSwipeActions
 
-(japanese)[https://github.com/ObuchiYuki/NoListSwipeActions/blob/main/README-ja.md]
+[README Japanese](https://github.com/ObuchiYuki/NoListSwipeActions/blob/main/README-ja.md)
 
 **A custom SwiftUI library that replicates the iOS 15 “swipeActions” feature without using `List`.** 
 

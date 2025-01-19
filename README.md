@@ -6,6 +6,7 @@
 
 With this library, you can display swipe actions in `ScrollView` or any custom view, enabling swipe gestures for actions like delete or favorite.
 
+<img src="https://github.com/user-attachments/assets/abb8559b-e374-407c-a370-1193872ef5b5" width="300px">
 
 
 ## Features
